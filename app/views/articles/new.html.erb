@@ -1,17 +1,7 @@
 <div class="container">
       <h1>add article</h1>
 
-      <%= form_for(@article) do |f| %>
-        <div class="form-group">
-          <%= f.label :title %>
-          <%= f.text_field :title, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :content %>
-          <%= f.text_field :content, class: 'form-control' %>
-        </div>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+  <%= render 'form', article: @article %>
 
-       <%= link_to "Retourner aux articles", articles_path, class: 'btn btn-secondary' %>
+<%= link_to "Retourner à la listes des Articles", articles_path, class: 'btn btn-secondary' %>
 </div>

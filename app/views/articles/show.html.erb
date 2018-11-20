@@ -1,2 +1,9 @@
-<h1><%=   @article.title %></h1>
+<h1><%= @article.title %></h1>
 <p><%=@article.content %></p>
+<%= link_to "Editer cet article", edit_article_path, class: 'btn btn-secondary' %>
+<%= link_to "Retourner à la listes des Articles", articles_path, class: 'btn btn-secondary' %>
+<%= link_to article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure you want to delete the article #{@article.title}" } do %>
+                  🗑
+            <% end %>
